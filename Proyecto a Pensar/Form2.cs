@@ -230,19 +230,29 @@ namespace Proyecto_a_Pensar
                     if (contadordeclientes == 0)
                     {
                         cambiarnombre = nombre;
+                        nombre = cambiarnombre;
                         contadordeclientes++;
 
                     }
                 }
+                if (mensajeServidor.Contains(cambiarnombre))
+                {
+                    string nombre = cambiarnombre;
                 if (mensajeServidor.Contains("Gano"))
                 {
-                    String[] nombrejugador = System.Text.RegularExpressions.Regex.Split(mensajeServidor, " ");
-                    string nombre = nombrejugador[1];
-
-                        MessageBox.Show("Felicitaciones Ganaste!!! Jugador:"+ cambiarnombre);
+                    String[] nombrejugador = System.Text.RegularExpressions.Regex.Split(mensajeServidor,"");
+                    if (nombre== cambiarnombre) 
+                    {
+                        
+                        MessageBox.Show("Felicitaciones Ganaste!!! Jugador:"+ nombre);
                         puntostot += 1;
-
-                        if (lblRecord.InvokeRequired)
+                     }
+                    else
+                    {
+                            MessageBox.Show("Perdiste  Jugador" + cambiarnombre);
+                    }
+                }
+                    if (lblRecord.InvokeRequired)
                         {
                             lblRecord.Invoke(new Action(() => lblRecord.Text = puntostot.ToString()));
                         }
