@@ -252,13 +252,13 @@ namespace Proyecto_a_Pensar
                             MessageBox.Show("Perdiste  Jugador" + cambiarnombre);
                     }
                 }
-                    if (lblRecord.InvokeRequired)
+                    if (lblVictorias.InvokeRequired)
                         {
-                            lblRecord.Invoke(new Action(() => lblRecord.Text = puntostot.ToString()));
+                            lblVictorias.Invoke(new Action(() => lblVictorias.Text = puntostot.ToString()));
                         }
                         else
                         {
-                            lblRecord.Text = puntostot.ToString();
+                        lblVictorias.Text = puntostot.ToString();
 
                         }
 

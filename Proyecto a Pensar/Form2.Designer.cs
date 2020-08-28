@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.txtChat = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblVictorias = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PanelJuego
@@ -119,11 +121,33 @@
             this.txtChat.Size = new System.Drawing.Size(176, 269);
             this.txtChat.TabIndex = 12;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(468, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 24);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Victorias:";
+            // 
+            // lblVictorias
+            // 
+            this.lblVictorias.AutoSize = true;
+            this.lblVictorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVictorias.Location = new System.Drawing.Point(563, 14);
+            this.lblVictorias.Name = "lblVictorias";
+            this.lblVictorias.Size = new System.Drawing.Size(20, 24);
+            this.lblVictorias.TabIndex = 17;
+            this.lblVictorias.Text = "0";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 468);
+            this.Controls.Add(this.lblVictorias);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEnviarMensaje);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMensaje);
@@ -151,5 +175,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMensaje;
         private System.Windows.Forms.TextBox txtChat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblVictorias;
     }
 }
